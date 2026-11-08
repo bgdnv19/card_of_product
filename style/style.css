@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 320px;
+    width: 100%;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.badge {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    box-shadow: 0 4px 10px rgba(255, 107, 107, 0.4);
+    z-index: 2;
+}
+
+.badge::before {
+    content: "🔥 ";
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover img {
+    transform: scale(1.05);
+}
+
+.product-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(0,0,0,0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-image:hover::after {
+    opacity: 1;
+}
+
+.product-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2d3436;
+    margin-bottom: 12px;
+}
+
+.product-description {
+    color: #636e72;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00b894;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.price::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #00b894;
+    border-radius: 2px;
+}
+
+.add-to-cart-btn {
+    background: linear-gradient(45deg, #0984e3, #74b9ff);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.add-to-cart-btn::before {
+    content: "🛒 ";
+}
+
+.add-to-cart-btn:hover {
+    background: linear-gradient(45deg, #074a7a, #0984e3);
+    transform: scale(1.05);
+}
+
+.add-to-cart-btn:active {
+    transform: scale(0.95);
+}
+
+
+
+
